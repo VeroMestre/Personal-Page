@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
+    color: #2d2d30;
     margin: 0;
     padding: 0;
-    background-color: #e3f2fd; /* Light blue background */
-    padding: 0 20px; /* Add padding to both left and right sides */
+    background-color: white; /* Light blue background */
+    padding: 0; /* Add padding to both left and right sides */
 }
 
 header {
@@ -39,15 +40,49 @@ nav .hamburger {
     cursor: pointer;
 }
 
-section#about-me {
-    text-align: center;
-    font-size: 18px;
-    list-style: none;
-    padding: 0 20px; /* Add padding to both left and right sides */
-    background-color: #ffccbc; /* Light orange */
+#about h2 {
+    margin: 0;
 }
 
-section#about-me ul li::before {
+section {
+    margin: 20px;
+}
+
+section#about {
+    font-size: 16px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ff7043;
+    /* Light orange */
+    border-radius: 10px;
+    max-width: 50%;
+    margin:auto;
+}
+
+section#projects .card {
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    color:#004aad; /* Blue */
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+figcaption{
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+section#about ul li::before {
     content: "✓";
     color: #ff7043; /* Darker orange */
     margin-right: 10px;
@@ -61,7 +96,6 @@ section#projects {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 800px; /* Set a maximum width for better centering */
-    padding: 0 20px; /* Add padding to both left and right sides */
 }
 
 section#projects .card {
@@ -79,6 +113,68 @@ section#projects .card h3 {
 
 section#projects .card p {
     margin-bottom: 0;
+}
+
+section#contact h2{
+    margin: 10px auto;
+    max-width: 50%;
+}
+
+section#skills{
+    margin: auto;
+    background-color: #ff914d;
+    padding: 10px;
+    color: #2d2d30;
+}
+
+section#skills ul, section#skills h2{
+    margin: 5px auto;
+    max-width: 50%;
+    padding: 5px;
+}
+
+section#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#contact form div {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+section#contact form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+section#contact form input,
+section#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+section#contact form button {
+    padding: 10px 20px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section#contact form button:hover {
+    background-color: #004aad;
 }
 
 @media (max-width: 1200px) {
@@ -105,24 +201,37 @@ section#projects .card p {
     section#projects .card {
         flex: 1 1 calc(100% - 40px);
     }
+
+    section#about {
+        max-width: 90%;
+    }
+    
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 20px 0; /* Remove padding from left and right sides */
+
+    #about h2{
+        margin: 0;
     }
 
-    section#about-me {
-        font-size: 16px;
+    section{
+        margin: 20px;
+    }
+
+    section#about {
+        max-width: 90%;
     }
 
     section#projects {
         padding: 10px;
+        margin: 10px;
     }
 
     section#projects .card {
         padding: 10px;
+        text-align: center;
     }
+
 }
 
 @media (min-width: 769px) {
